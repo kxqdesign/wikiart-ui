@@ -22,13 +22,15 @@ const Index: React.FC = () => {
             "浏览、学习和测试不同的 UI 设计风格。为您的下一个项目获取灵感和设计提示。"
           )}
         </p>
-        <Link to="/demo">
-          <Button className="flex items-center gap-2 shadow-md">
-            <Layout className="h-4 w-4" />
-            {t("View Interactive Style Demo", "查看交互式风格示例")}
-            <ArrowRight className="h-4 w-4 ml-1" />
-          </Button>
-        </Link>
+        <div className="flex justify-center">
+          <Link to="/demo">
+            <Button className="bg-black text-white hover:bg-black/90 flex items-center gap-2 shadow-md">
+              <Layout className="h-4 w-4" />
+              {t("View Interactive Style Demo", "查看交互式风格示例")}
+              <ArrowRight className="h-4 w-4 ml-1" />
+            </Button>
+          </Link>
+        </div>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 animate-slide-up mt-12">
