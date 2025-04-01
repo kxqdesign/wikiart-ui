@@ -8,6 +8,7 @@ import { StyleProvider } from "@/contexts/StyleContext";
 import Header from "@/components/Header";
 import Index from "./pages/Index";
 import StyleDetail from "./pages/StyleDetail";
+import Demo from "./pages/Demo";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/style/:id" element={<StyleDetail />} />
+                <Route path="/demo" element={<Demo />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
