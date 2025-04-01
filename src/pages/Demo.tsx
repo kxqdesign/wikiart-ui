@@ -22,13 +22,28 @@ const Demo: React.FC = () => {
             返回首页
           </Button>
         </Link>
-        <Badge>{currentStyle.name} 风格</Badge>
+        <div className="flex items-center gap-2">
+          <span className="text-sm text-muted-foreground">当前风格:</span>
+          <Badge 
+            className="px-3 py-1"
+            style={{ 
+              backgroundColor: currentStyle.colorPalette.primary,
+              color: currentStyle.colorPalette.background 
+            }}
+          >
+            {currentStyle.nameChinese || currentStyle.name}
+          </Badge>
+        </div>
       </div>
 
-      <Card className={`mb-8 overflow-hidden ${styleClasses}`}>
+      <Card className={`mb-8 overflow-hidden ${styleClasses}`}
+        style={{ 
+          borderColor: currentStyle.id === 'brutalism' ? 'black' : currentStyle.colorPalette.primary + '33'
+        }}
+      >
         <CardHeader className="pb-0">
           <CardTitle className="text-center text-2xl">
-            {currentStyle.name} 设计风格展示
+            {currentStyle.nameChinese || currentStyle.name} 设计风格展示
           </CardTitle>
         </CardHeader>
         <CardContent className="p-6">

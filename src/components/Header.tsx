@@ -1,11 +1,14 @@
 
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Palette, Layout } from "lucide-react";
 import StyleSwitcher from "@/components/StyleSwitcher";
 import { Button } from "@/components/ui/button";
 
 const Header: React.FC = () => {
+  const location = useLocation();
+  const isDemo = location.pathname === '/demo';
+
   return (
     <header className="border-b py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
@@ -21,7 +24,7 @@ const Header: React.FC = () => {
             </Button>
           </Link>
         </div>
-        <StyleSwitcher />
+        {isDemo && <StyleSwitcher />}
       </div>
     </header>
   );

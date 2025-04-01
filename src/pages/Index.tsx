@@ -5,7 +5,7 @@ import { designStyles } from "@/data/designStyles";
 import StyleCard from "@/components/StyleCard";
 import { useStyle } from "@/contexts/StyleContext";
 import { Button } from "@/components/ui/button";
-import { Layout } from "lucide-react";
+import { Layout, ArrowRight } from "lucide-react";
 
 const Index: React.FC = () => {
   const { currentStyle } = useStyle();
@@ -18,9 +18,10 @@ const Index: React.FC = () => {
           Browse, learn, and test different UI design styles. Get inspiration and design prompts for your next project.
         </p>
         <Link to="/demo">
-          <Button className="flex items-center gap-2">
+          <Button className="flex items-center gap-2 shadow-md">
             <Layout className="h-4 w-4" />
             查看交互式风格示例
+            <ArrowRight className="h-4 w-4 ml-1" />
           </Button>
         </Link>
       </div>
