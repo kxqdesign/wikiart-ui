@@ -6,12 +6,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useStyle } from "@/contexts/StyleContext";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { getStyleClasses } from "@/data/designStyles";
 import DemoContent from "@/components/DemoContent";
 
 const Demo: React.FC = () => {
   const { currentStyle } = useStyle();
+  const { t, language } = useLanguage();
   const styleClasses = getStyleClasses(currentStyle.id);
+  const displayStyleName = language === "zh" && currentStyle.nameChinese ? currentStyle.nameChinese : currentStyle.name;
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl animate-fade-in">
@@ -19,11 +22,11 @@ const Demo: React.FC = () => {
         <Link to="/">
           <Button variant="ghost" className="flex items-center gap-1">
             <ArrowLeft className="h-4 w-4" />
-            返回首页
+            {t("Back to Home", "返回首页")}
           </Button>
         </Link>
         <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">当前风格:</span>
+          <span className="text-sm text-muted-foreground">{t("Current Style:", "当前风格:")}</span>
           <Badge 
             className="px-3 py-1"
             style={{ 
@@ -31,7 +34,7 @@ const Demo: React.FC = () => {
               color: currentStyle.colorPalette.background 
             }}
           >
-            {currentStyle.nameChinese || currentStyle.name}
+            {displayStyleName}
           </Badge>
         </div>
       </div>
@@ -43,7 +46,7 @@ const Demo: React.FC = () => {
       >
         <CardHeader className="pb-0">
           <CardTitle className="text-center text-2xl">
-            {currentStyle.nameChinese || currentStyle.name} 设计风格展示
+            {t(`${displayStyleName} Design Style Showcase`, `${displayStyleName} 设计风格展示`)}
           </CardTitle>
         </CardHeader>
         <CardContent className="p-6">

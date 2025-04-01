@@ -3,11 +3,14 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Palette, Layout } from "lucide-react";
 import StyleSwitcher from "@/components/StyleSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header: React.FC = () => {
   const location = useLocation();
   const isDemo = location.pathname === '/demo';
+  const { t } = useLanguage();
 
   return (
     <header className="border-b py-4">
@@ -20,11 +23,14 @@ const Header: React.FC = () => {
           <Link to="/demo">
             <Button variant="ghost" size="sm" className="flex items-center gap-1">
               <Layout className="h-4 w-4" />
-              <span>示例页面</span>
+              <span>{t("Demo Page", "示例页面")}</span>
             </Button>
           </Link>
         </div>
-        {isDemo && <StyleSwitcher />}
+        <div className="flex items-center gap-2">
+          {isDemo && <StyleSwitcher />}
+          <LanguageSwitcher />
+        </div>
       </div>
     </header>
   );
