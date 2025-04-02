@@ -14,7 +14,7 @@ An interactive guide helping you learn how to achieve different UI design styles
 
 使用 [Lovable](https://lovable.dev) 和 [Cursor](https://cursor.sh/) Vibe Coding 构建。
 
-Code UI 风格中的 CRT 显示器效果参考了 CodePen 上的一个案例并进行了改进（原始链接已遗失）。如果有人知道源代码链接，请告诉我，我会在这里添加适当的署名。
+Code UI 风格中的 CRT 显示器效果参考了 CodePen 上的一个案例并进行了改进（原始链接我找不到了）。如果有人知道源代码链接，请告诉我，我会在这里添加适当的署名。
 
 Built with [Lovable](https://lovable.dev) and [Cursor](https://cursor.sh/) Vibe Coding. 
 
@@ -103,12 +103,6 @@ npm run dev
 ```
 
 </details>
-
----
-
-## 📜 License | 许可证
-
-MIT License
 
 ---
 
