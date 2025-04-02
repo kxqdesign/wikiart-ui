@@ -15,9 +15,9 @@ const Header: React.FC = () => {
     <header className="border-b py-4">
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center gap-4">
-          <Link to="/" className="flex items-center gap-2 text-xl font-semibold" aria-label="Design Insight Home">
+          <Link to="/" className="flex items-center gap-2 text-xl font-semibold" aria-label="WikiArt UI Home">
             <Palette className="h-6 w-6" aria-hidden="true" />
-            <span>Design Insight</span>
+            <span>WikiArt UI</span>
           </Link>
           <Link to="/demo">
             <Button variant="ghost" size="sm" className="flex items-center gap-1">

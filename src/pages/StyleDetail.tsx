@@ -35,7 +35,7 @@ const StyleDetail: React.FC = () => {
     return (
       <div className="container mx-auto px-4 py-16 text-center">
         <SEO 
-          title="Style Not Found - Design Insight"
+          title="Style Not Found - WikiArt UI"
           description="The requested design style could not be found."
         />
         <h2 className="text-2xl font-bold">{t("Style not found", "Style not found")}</h2>

@@ -12,7 +12,7 @@ const NotFound: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16 text-center">
       <SEO 
-        title="Page Not Found - Design Insight"
+        title="Page Not Found - WikiArt UI"
         description="The page you are looking for does not exist."
       />
       <h1 className="text-4xl font-bold mb-6">{t("404 - Page Not Found", "404 - 页面未找到")}</h1>

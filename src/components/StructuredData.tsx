@@ -53,7 +53,7 @@ export const DesignStyleStructuredData: React.FC<DesignStyleStructuredDataProps>
   url,
   datePublished = new Date().toISOString(),
   imageUrl = "https://lovable.dev/opengraph-image-p98pqg.png",
-  authorName = "Design Insight",
+  authorName = "WikiArt UI",
   keywords = [],
 }) => {
   const structuredData = {
@@ -68,7 +68,7 @@ export const DesignStyleStructuredData: React.FC<DesignStyleStructuredDataProps>
     },
     publisher: {
       "@type": "Organization",
-      name: "Design Insight",
+      name: "WikiArt UI",
       logo: {
         "@type": "ImageObject",
         url: "https://lovable.dev/opengraph-image-p98pqg.png"
