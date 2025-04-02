@@ -1,0 +1,16 @@
+[33m6124648[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Fix MIME type issues and deployment configuration
+[33m0fc97da[m Resolve merge conflict in CNAME
+[33m83fc5cf[m Fix deployment configuration
+[33mea32ab6[m Update CNAME
+[33mcbb7809[m Resolve CNAME conflict
+[33m83df288[m Setup GitHub Pages deployment
+[33m48b4386[m Create CNAME
+[33m4970e4b[m Tab title change and X SEO
+[33m0184ec5[m Rename project to WikiArt UI
+[33mc8bf688[m Initial commit: Design Insight project with SEO optimization
+[33mcffe6ce[m Fix: Center demo button and make it black
+[33ma5c3406[m Add multi-language support
+[33m984b7d7[m feat: Improve demo page and style switcher
+[33m88a6f7c[m feat: Implement style-based page theme
+[33m021c9a5[m feat: Implement UI style exploration website
+[33m351e03e[m Use tech stack vite_react_shadcn_ts [skip gpt_engineer]
