@@ -6,8 +6,6 @@
 
 An interactive guide helping you learn how to achieve different UI design styles through AI prompts. From minimalism to brutalism, glassmorphism to neumorphism - each style serves as a practical case study of AI-human dialogue.
 
-[Switch to English](#english) | [切换到中文](#中文)
-
 </div>
 
 <details>
