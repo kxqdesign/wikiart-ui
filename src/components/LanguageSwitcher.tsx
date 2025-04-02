@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -18,7 +17,7 @@ const LanguageSwitcher: React.FC = () => {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="sm" className="flex items-center gap-1">
           <Globe className="h-4 w-4" />
-          <span>{language === "en" ? "EN" : "中文"}</span>
+          <span>{language === "en" ? "EN" : "ZH"}</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
@@ -26,7 +25,7 @@ const LanguageSwitcher: React.FC = () => {
           English
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setLanguage("zh")}>
-          中文
+          Chinese
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

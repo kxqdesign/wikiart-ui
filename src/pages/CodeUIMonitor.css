@@ -1,0 +1,448 @@
+/* Code UI Monitor Styles - 使用特定前缀避免冲突 */
+.code-ui-demo-page {
+  background-color: #336;
+}
+
+.codeui-container {
+  display: flex;
+  justify-content: center;
+}
+
+.codeui-computer-container {
+  --width-monitor: 600px;
+  --height-monitor: 500px;
+  --monitor-light-color: #d3ccbc;
+  --monitor-dark-color: #ccc5b3;
+  --monitor-shadow-light: #d7d4c1;
+  --monitor-shadow-medium: #b7b19b;
+  --monitor-shadow-dark: #908e7a;
+  --monitor-shadow-very-dark: #6e6d5f;
+  --monitor-gradient:
+    linear-gradient(
+      to bottom,
+      var(--monitor-light-color),
+      var(--monitor-dark-color)
+    );
+  --monitor-shadow-texture:
+    2px -2px 30px #493e2a33 inset,
+    -2px -2px 30px #493e2a33 inset,
+    1px -1px 1px #493e2a33 inset,
+    -1px -1px 1px #493e2a33 inset,
+    0 2px 30px #ddd inset;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.codeui-monitor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: var(--width-monitor);
+  height: var(--height-monitor);
+  background: var(--monitor-gradient);
+  border-radius: 5px;
+  box-shadow: var(--monitor-shadow-texture);
+}
+
+.codeui-monitor-inner {
+  width: calc(var(--width-monitor) * 0.75);
+  height: calc(var(--height-monitor) * 0.7);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  border: 15px solid var(--monitor-shadow-medium);
+  border-top: 15px solid var(--monitor-shadow-dark);
+  border-bottom: 15px solid var(--monitor-shadow-light);
+}
+
+.codeui-screen-container {
+  width: calc(var(--width-monitor) * 0.72);
+  height: calc(var(--height-monitor) * 0.68);
+  background: #031e11;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid #000;
+  box-shadow:
+    10px 10px 20px 14px #0008 inset,
+    -10px -10px 20px 14px #0008 inset;
+  position: relative;
+}
+
+.codeui-screen {
+  width: 100%;
+  height: 100%;
+  max-width: calc(var(--width-monitor) * 0.72);
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #00ff9d;
+  text-shadow: 0 0 5px #0c7b46;
+  padding: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 5;
+  transition: opacity 0.5s;
+  text-align: left;
+}
+
+.codeui-screen.off {
+  opacity: 0;
+}
+
+.codeui-eyes {
+  width: 300px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  transition: opacity 0.5s;
+}
+
+.codeui-eyes.off {
+  opacity: 0;
+}
+
+.codeui-eye {
+  width: 50px;
+  height: 50px;
+  background: #000;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(0, 25px);
+  position: relative;
+  overflow: hidden;
+}
+
+.codeui-eye::before {
+  content: "";
+  display: block;
+  background: #333;
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  animation: blinkEye 2s ease infinite alternate;
+}
+
+.codeui-eye::after {
+  content: "";
+  display: block;
+  background: #333;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
+  transform: translate(0, 0);
+}
+
+.codeui-shine {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background: #ccc;
+  transform: translate(10px, -5px);
+}
+
+.codeui-monitor-bottom {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translate(150px, 0);
+}
+
+.codeui-power-switch {
+  width: 38px;
+  height: 38px;
+  background: linear-gradient(to bottom, var(--monitor-shadow-dark), var(--monitor-shadow-light));
+  border-radius: 50%;
+  margin-right: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.codeui-power-switch .codeui-button {
+  --symbol-color: #888;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #555;
+  border-radius: 50%;
+  background: #cac1b2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.codeui-power-switch .codeui-button:active {
+  --symbol-color: #666;
+  box-shadow: 1px 1px 2px #0006 inset;
+  background: var(--monitor-shadow-medium);
+}
+
+.codeui-power-switch .codeui-button::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 3px solid var(--symbol-color);
+  border-radius: 50%;
+  clip-path: polygon(15% 0, 0 0, 0 102%, 102% 100%, 102% 0, 85% 0, 50% 50%);
+}
+
+.codeui-power-switch .codeui-button::after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 10px;
+  border-radius: 1px;
+  border-left: 3px solid var(--symbol-color);
+  position: absolute;
+  transform: translate(2px, -4px);
+}
+
+.codeui-power-led {
+  width: 9px;
+  height: 9px;
+  background: #333;
+  border-radius: 50%;
+  border: 1px solid var(--monitor-shadow-dark);
+}
+
+.codeui-power-led:not(.on) {
+  box-shadow: 0 0 1px 1px #2228 inset;
+  animation: blink 2s infinite ease-out;
+}
+
+.codeui-power-led.on {
+  background: #5cef11;
+  box-shadow: 0 0 1px 1px #2228 inset;
+}
+
+.codeui-monitor::before,
+.codeui-monitor::after {
+  content: "";
+  display: block;
+  width: 63px;
+  height: 40px;
+  background: linear-gradient(to right, #0004 65%, #0008 80%);
+  position: absolute;
+  top: 130px;
+}
+
+.codeui-monitor::before {
+  left: 0;
+}
+
+.codeui-monitor::after {
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.codeui-monitor-base {
+  width: calc(var(--width-monitor) * 0.75);
+  height: 45px;
+  background: var(--monitor-gradient);
+  overflow: hidden;
+  border-radius: 0 0 3px 3px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.codeui-monitor-base::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 30px;
+  background: #0007;
+  filter: blur(8px);
+  transform: translate(0, -10px);
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+
+.codeui-wheels-parent {
+  width: 125px;
+  height: 20px;
+  display: flex;
+}
+
+.codeui-wheel {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 4px;
+  background: var(--monitor-shadow-light);
+  box-shadow: 0 1px 5px #0009;
+  transform: translate(95px, -26px);
+}
+
+.codeui-monitor-holder-container {
+  width: calc(var(--width-monitor) * 0.6);
+  perspective: 280px;
+  position: relative;
+  z-index: -1;
+  transform: translateY(-10px);
+}
+
+.codeui-monitor-holder {
+  width: 100%;
+  height: 90px;
+  background:
+    linear-gradient(
+      to top,
+      var(--monitor-shadow-medium) 5%,
+      var(--monitor-shadow-very-dark) 40%
+    );
+  box-shadow: 0 -10px 20px #0007 inset;
+  transform: rotateX(44deg) translateY(-33px);
+  display: flex;
+  justify-content: center;
+}
+
+.codeui-monitor-holder-inner {
+  width: calc(var(--width-monitor) * 0.45);
+  height: 100px;
+  background:
+    linear-gradient(
+      to top,
+      var(--monitor-shadow-medium) 1%,
+      var(--monitor-shadow-dark) 15%
+    );
+  border-radius: 50%;
+  box-shadow: 0 -2px 20px #000a inset;
+  transform: translate(0, -55px);
+}
+
+.codeui-monitor-holder-inner-front {
+  content: "";
+  display: block;
+  width: calc(var(--width-monitor) * 0.45);
+  height: 100px;
+  border-radius: 28% 28% 50% 50%;
+  background: #0001;
+  box-shadow: 0 -2px 10px #0004 inset;
+  position: absolute;
+  z-index: -1;
+  transform: translate(0, -32px);
+}
+
+.codeui-monitor-holder-inner-front.bottom {
+  background: var(--monitor-shadow-dark);
+  box-shadow:
+    0 -12px 10px #fff4 inset,
+    0 -6px 10px #0001 inset;
+  transform: translate(0, -54px);
+  z-index: 0;
+}
+
+.codeui-monitor-holder-front {
+  width: calc(var(--width-monitor) * 0.62);
+  height: 20px;
+  background: var(--monitor-shadow-light);
+  transform: translate(-5px, -36px);
+}
+
+@keyframes blinkEye {
+  0%, 80% { transform: translateY(0); }
+  80%, 100% { transform: translateY(-90%); }
+}
+
+@keyframes blink {
+  0%, 19% { background: #ed9940; }
+  20%, 99% { background: #333; }
+}
+
+/* Terminal内容样式 */
+.codeui-content-container {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #00ff9d;
+  text-align: left;
+}
+
+.codeui-prompt {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 16px;
+}
+
+.codeui-prompt::before {
+  content: "$ ";
+  position: absolute;
+  left: 0;
+  color: rgba(0, 255, 157, 0.7);
+}
+
+.codeui-block {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-left: 3px solid #0c7b46;
+  padding: 10px;
+  margin: 10px 0 15px;
+}
+
+.codeui-heading {
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(12, 123, 70, 0.5);
+  font-weight: bold;
+}
+
+.codeui-heading::before {
+  content: "# ";
+  color: rgba(0, 255, 157, 0.7);
+}
+
+.codeui-cursor::after {
+  content: "_";
+  display: inline-block;
+  animation: cursor-blink 1s infinite;
+}
+
+.codeui-demo-container {
+  margin: 15px 0;
+}
+
+.codeui-button {
+  background-color: #031e11;
+  color: #00ff9d;
+  border: 1px solid #0c7b46;
+  padding: 5px 10px;
+  font-family: "JetBrains Mono", monospace;
+  cursor: pointer;
+}
+
+.codeui-button:hover {
+  background-color: #052e1a;
+  box-shadow: 0 0 10px rgba(12, 123, 70, 0.5);
+}
+
+@keyframes cursor-blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+} 

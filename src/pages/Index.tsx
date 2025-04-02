@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { designStyles } from "@/data/designStyles";
@@ -7,13 +6,25 @@ import { useStyle } from "@/contexts/StyleContext";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { Button } from "@/components/ui/button";
 import { Layout, ArrowRight } from "lucide-react";
+import { SEO } from "@/components/SEO";
+import { WebsiteStructuredData } from "@/components/StructuredData";
 
 const Index: React.FC = () => {
   const { currentStyle } = useStyle();
   const { t } = useLanguage();
+  const siteUrl = window.location.origin;
   
   return (
     <div className="container mx-auto px-4 py-8 animate-fade-in">
+      <SEO 
+        title="Design Insight - UI Design Style Explorer"
+        description="Browse, learn, and test different UI design styles. Get inspiration and design prompts for your next project."
+      />
+      <WebsiteStructuredData 
+        siteUrl={siteUrl}
+        siteName="Design Insight"
+        description="Browse, learn, and test different UI design styles. Get inspiration and design prompts for your next project."
+      />
       <div className="max-w-3xl mx-auto mb-8 text-center">
         <h1 className="text-4xl font-bold mb-4">{t("UI Design Style Explorer", "UI 设计风格探索")}</h1>
         <p className="text-lg text-muted-foreground mb-6">
