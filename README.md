@@ -6,7 +6,19 @@
 
 An interactive guide helping you learn how to achieve different UI design styles through AI prompts. From minimalism to brutalism, glassmorphism to neumorphism - each style serves as a practical case study of AI-human dialogue.
 
+🌐 [Live Demo | 在线演示](https://wikiart-ui.lovable.app)
+
 </div>
+
+## 💡 About | 关于
+
+使用 [Lovable](https://lovable.dev) 和 [Cursor](https://cursor.sh/) Vibe Coding 构建。
+
+Code UI 风格中的 CRT 显示器效果参考了 CodePen 上的一个案例并进行了改进（原始链接已遗失）。如果有人知道源代码链接，请告诉我，我会在这里添加适当的署名。
+
+Built with [Lovable](https://lovable.dev) and [Cursor](https://cursor.sh/) Vibe Coding. 
+
+The CRT monitor effect in Code UI style was inspired by a CodePen demo (original link lost). If anyone recognizes the source, please let me know and I'll add proper attribution here.
 
 <details>
 <summary>English</summary>
@@ -14,8 +26,6 @@ An interactive guide helping you learn how to achieve different UI design styles
 ## ✨ Features
 
 A modern UI design style explorer. Experience different design styles in action - from minimalism to brutalism, glassmorphism to neumorphism.
-
-🌐 [Live Demo](https://wikiart-ui.lovable.app)
 
 ### Features
 
@@ -50,12 +60,6 @@ npm install
 npm run dev
 ```
 
-### 💡 About
-
-Built with [Lovable](https://lovable.dev) and [Cursor](https://cursor.sh/) Vibe Coding.
-
-The CRT monitor effect in Code UI style was inspired by a CodePen demo (original link lost). If anyone recognizes the source, please let me know and I'll add proper attribution here.
-
 </details>
 
 <details>
@@ -64,8 +68,6 @@ The CRT monitor effect in Code UI style was inspired by a CodePen demo (original
 ## ✨ 特性
 
 现代 UI 设计风格探索导航。体验从极简主义到野兽派、玻璃拟态到新拟态等多种设计风格的实际效果。
-
-🌐 [在线演示](https://wikiart-ui.lovable.app)
 
 ### 特性
 
@@ -99,12 +101,6 @@ cd wikiart-ui
 npm install
 npm run dev
 ```
-
-### 💡 关于
-
-使用 [Lovable](https://lovable.dev) 和 [Cursor](https://cursor.sh/) Vibe Coding 构建。
-
-Code UI 风格中的 CRT 显示器效果参考了 CodePen 上的一个案例并进行了改进（原始链接找不到了）。如果有人知道源代码链接，请告诉我，我会在这里添加适当的署名。
 
 </details>
 
