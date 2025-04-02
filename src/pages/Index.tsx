@@ -17,12 +17,12 @@ const Index: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8 animate-fade-in">
       <SEO 
-        title="Design Insight - UI Design Style Explorer"
+        title="Wikiart UI - UI Design Style Explorer"
         description="Browse, learn, and test different UI design styles. Get inspiration and design prompts for your next project."
       />
       <WebsiteStructuredData 
         siteUrl={siteUrl}
-        siteName="Design Insight"
+        siteName="Wikiart UI"
         description="Browse, learn, and test different UI design styles. Get inspiration and design prompts for your next project."
       />
       <div className="max-w-3xl mx-auto mb-8 text-center">

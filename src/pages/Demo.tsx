@@ -72,7 +72,7 @@ const Demo: React.FC = () => {
     return (
       <>
         <SEO 
-          title="Interactive Demo - Design Insight"
+          title="Interactive Demo - Wikiart UI"
           description="Explore and interact with different UI design styles in this interactive demo."
         />
         

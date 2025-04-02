@@ -11,8 +11,8 @@ interface SEOProps {
 }
 
 export const SEO: React.FC<SEOProps> = ({
-  title = "Design Insight - UI Design Style Explorer",
-  description = "Browse, learn, and test different UI design styles. Get inspiration and design prompts for your next project.",
+  title = "WikiArt UI - Design Style Explorer", // TODO: change to WikiArt UI
+  description = "Explore and learn UI design styles. Get inspiration and design prompts for your next project.",
   canonicalUrl = window.location.href,
   ogImage = "https://lovable.dev/opengraph-image-p98pqg.png",
   ogType = "website",
@@ -33,17 +33,19 @@ export const SEO: React.FC<SEOProps> = ({
       <meta property="og:type" content={ogType} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="Design Insight" />
+      <meta property="og:site_name" content="WikiArt UI" />
       
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:site" content="@1revresbo" />
+      <meta name="twitter:creator" content="@1revresbo" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
       
       {/* Additional SEO tags */}
       <meta name="robots" content="index, follow" />
-      <meta name="author" content="Design Insight" />
+      <meta name="author" content="WikiArt UI" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     </Helmet>
   );

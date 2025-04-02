@@ -67,7 +67,7 @@ const StyleDetail: React.FC = () => {
       isCodeUI && "bg-[#021208] text-[#00ff9d]"
     )}>
       <SEO 
-        title={`${displayName} - Design Insight`}
+        title={`${displayName} - Wikiart UI`}
         description={style.description}
         ogType="article"
       />
